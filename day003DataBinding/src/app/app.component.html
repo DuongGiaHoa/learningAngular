@@ -1,0 +1,16 @@
+<p>Data Binding</p>
+
+<!-- {{ expression }} -->
+<span>{{ user.name }} </span>
+<span>{{ user.age }} </span>
+<br />
+
+<input type="text" [value]="user.name" />
+
+<button type="button" (click)="handler()">Click Me</button>
+<br/>
+<br/>
+<br/>
+<input type="text" [(ngModel)]="user.name" />
+<input type="text" [ngModel]="user.name" (ngModelChange)="user.name = $event" />
+
