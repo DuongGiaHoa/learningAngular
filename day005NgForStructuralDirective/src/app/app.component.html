@@ -1,0 +1,20 @@
+<ul>
+  <li
+    *ngFor="
+      let user of users;
+      index as i
+      count as total;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd
+    "
+  >
+    <span>{{ user.id }} - {{ user.name }} - {{ user.phone }}</span><br/>
+    <span>at index {{i}} out of {{total}}</span><br/>
+    <span *ngIf="isEven">even num.</span><br/>
+    <span *ngIf="isOdd">odd num.</span><br/>
+    <span *ngIf="isLast">last item</span><br/>
+    <span *ngIf="isFirst">first item</span><br/>
+  </li>
+</ul>
