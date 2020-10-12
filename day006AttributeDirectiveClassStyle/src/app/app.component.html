@@ -1,0 +1,54 @@
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
+<!-- class binding
+  -[class.name-class]
+  -[class]="[]"
+  -[class]="{}"
+  -[class]="variable"
+-->
+<div
+  class="box"
+  [class.red-border]="isDanger"
+  [class.pink-bg]="isWarning"
+></div>
+
+<div
+  class="box"
+  [class]="{ 'red-border': isDanger, 'pink-bg': isWarning }"
+></div>
+
+<div [class]="classes"></div>
+
+<!-- style binding
+  -[style.name-style]
+  -[style.nameStyle]
+  -[style.name-style.unit]
+  -[style]="object"
+  -[style.css-variable]
+-->
+
+<span [style.color]="'pink'" [style.backgroundColor]="'black'">
+  Style Binding </span
+><br /><br /><br /><br />
+<span [style.color]="'pink'" [style.background-color]="'black'">
+  Style Binding
+</span>
+<br /><br /><br /><br />
+<span
+  [style.color]="'pink'"
+  [style.background-color]="'black'"
+  [style.fontSize.px]="20"
+>
+  Style Binding
+</span>
+<br /><br /><br /><br />
+<span [style]="{ color: 'black', backgroundColor: 'pink', fontSize: '20px' }">
+  Style Binding
+</span>
+<br /><br /><br /><br />
+<span
+  [style.--text-color]="isDanger ? 'red' : 'black'"
+  [style]="{ color: 'var(--text-color)', backgroundColor: 'pink', fontSize: '20px' }"
+>
+  Style Binding
+</span>
