@@ -1,0 +1,18 @@
+<button (click)="currentProgress = currentProgress + 1">+1</button>
+<br />
+<br />
+<app-progress-bar
+  [progress]="45"
+  [backgroundColor]="'#9e9e9e'"
+  [progressColor]="'pink'"
+>
+</app-progress-bar>
+<br />
+<br />
+<br />
+<app-progress-bar
+  [progress]="currentProgress"
+  [backgroundColor]="'#9e9e9e'"
+  [progressColor]="'blue'"
+>
+</app-progress-bar>
